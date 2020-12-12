@@ -1,26 +1,221 @@
-$font-size: 14px;
-$font-stack: Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
 
-* {
-    text-align: center;
+$font-stack: 'Roboto', sans-serif;
+$size: 40px;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+#profile {
+    border-radius: 50%;
 }
 
-body {
+// mobile view
+@media (max-width: 768px){
+    #profile {
+        max-width: 50%;
+        height: auto;
+        margin: auto;
+    }
+
+    #about {
+        text-align: center;
+
+        * {
+            padding-bottom: 3px;
+        }
+    }
+}
+
+// desktop view
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    #about {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-auto-rows: max-content;
+        row-gap: 1%;
+
+        #title {
+            grid-area: 1 / 1 / span 1 / span 2;
+        }
+    
+        #bio {
+            grid-area: 2 / 1 / span 1 / span 1;
+        }
+
+        #profile {
+            grid-area: 2 / 2 / span 1 / span 1;
+            max-width: 75%;
+            height: auto;
+            margin: auto;         
+        }
+    
+        #skills {
+            grid-area: 3 / 1 / span 1 / span 2;
+            display: grid;
+            grid-auto-rows: max-content;
+            grid-template-columns: 33% 33% 33%;
+
+            div:nth-child(odd) {
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+
+            }
+
+            li {
+                text-align: center;
+                //list-style: disc;
+            }
+
+            h1 {
+                grid-area: 1 / 1 / span 1 / span 3;
+                padding-bottom: 1vh;
+                text-align: center;
+                border-bottom: 1px solid black;
+            }
+
+            #beginner {
+                grid-area: 2 / 3 / span 1 / span 1;
+                h2 {
+                    text-align: center;
+                }
+            }
+
+            #intermediate {
+                grid-area: 2 / 2 / span 1 / span 1;
+                h2 {
+                    text-align: center;
+                }
+            }
+
+            #expert {
+                grid-area: 2 / 1 / span 1 / span 1;
+                h2 {
+                    text-align: center;
+                }    
+            }
+        }
+    }
+}
+
+p, li {
+    font-size: $size * 0.38;
+    font-family: $font-stack;
+    padding-top: 6px;
+}
+
+time {
+    font-size: $size * 0.35;
     font-family: $font-stack;
 }
 
-p {
-    font-size: $font-size;
-}
-
 h1 {
-    font-size: $font-size * 4;
+    font-family: $font-stack;
+    font-size: $size * 0.8;
 }
 
 h2 {
-    font-size: $font-size * 3;
+    font-family: $font-stack;
+    font-size: $size * 0.55;
 }
 
-.link-item {
-    font-size: $font-size;
+h3 {
+    font-family: $font-stack;
+    font-size: $size * 0.45;
+}
+
+main {
+    grid-area: 2 / 2 / auto / 3;
+}
+
+.social {
+    grid-area: 2 / 3 / auto / 4;
+    text-align: center;
+
+    li {
+        font-family: $font-stack;
+        font-size: $size * 0.4;
+        padding-top: 7px;
+    }
+
+    img {
+        height: 25px;
+        width: auto;
+    }
+}
+
+.navbar {
+    grid-area: 2 / 1 / auto / 2;
+    text-align: center;
+    padding: 10px 0 10px 0;
+
+    li {
+        font-family: $font-stack;
+        font-size: $size * 0.4;
+        padding-top: 7px;
+    }
+}
+
+.header {
+    padding-top: 0.6%;
+    padding-bottom: 2%;
+    grid-area: 1 / 1 / span 1 / span 3;
+    text-align: center;
+
+    .title {
+        font-family: $font-stack;
+        font-size: $size * 1.1;
+    }
+}
+
+article.project {
+    padding: 15px 0 10px 0;
+    border-bottom: 1px dashed rgb(0, 0, 0);
+
+    p {
+        padding-top: 12px;
+    }
+}
+
+article.post {
+    p:first-of-type {
+        padding-top: 30px;
+    }
+
+    p {
+        padding-top: 15px;
+    }
+
+    // blockquote style from Coyier (2013) - https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
+    blockquote {
+        background: #f9f9f9;
+        border-left: 10px solid #ccc;
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+    
+        p {
+            display: inline;
+        }
+    }
+    // end of blockquote style
+}
+
+.footer {
+    grid-area: 3 / 1 / span 1 / span 3;
+    border-top: 1px solid black;
+    padding: 0.5%;
+    text-align: center;
+    font-family: $font-stack;
+    font-size: $size * 0.3;
 }

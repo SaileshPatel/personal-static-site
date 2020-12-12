@@ -1,25 +1,190 @@
-* {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-body {
-  font-family: Helvetica, sans-serif;
+#profile {
+  border-radius: 50%;
 }
 
-p {
+@media (max-width: 768px) {
+  #profile {
+    max-width: 50%;
+    height: auto;
+    margin: auto;
+  }
+
+  #about {
+    text-align: center;
+  }
+  #about * {
+    padding-bottom: 3px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  #about {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-auto-rows: max-content;
+    row-gap: 1%;
+  }
+  #about #title {
+    grid-area: 1/1/span 1/span 2;
+  }
+  #about #bio {
+    grid-area: 2/1/span 1/span 1;
+  }
+  #about #profile {
+    grid-area: 2/2/span 1/span 1;
+    max-width: 75%;
+    height: auto;
+    margin: auto;
+  }
+  #about #skills {
+    grid-area: 3/1/span 1/span 2;
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: 33% 33% 33%;
+  }
+  #about #skills div:nth-child(odd) {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+  #about #skills li {
+    text-align: center;
+  }
+  #about #skills h1 {
+    grid-area: 1/1/span 1/span 3;
+    padding-bottom: 1vh;
+    text-align: center;
+    border-bottom: 1px solid black;
+  }
+  #about #skills #beginner {
+    grid-area: 2/3/span 1/span 1;
+  }
+  #about #skills #beginner h2 {
+    text-align: center;
+  }
+  #about #skills #intermediate {
+    grid-area: 2/2/span 1/span 1;
+  }
+  #about #skills #intermediate h2 {
+    text-align: center;
+  }
+  #about #skills #expert {
+    grid-area: 2/1/span 1/span 1;
+  }
+  #about #skills #expert h2 {
+    text-align: center;
+  }
+}
+p, li {
+  font-size: 15.2px;
+  font-family: "Roboto", sans-serif;
+  padding-top: 6px;
+}
+
+time {
   font-size: 14px;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
-  font-size: 56px;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
 }
 
 h2 {
-  font-size: 42px;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
 }
 
-.link-item {
-  font-size: 14px;
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+main {
+  grid-area: 2/2/auto/3;
+}
+
+.social {
+  grid-area: 2/3/auto/4;
+  text-align: center;
+}
+.social li {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding-top: 7px;
+}
+.social img {
+  height: 25px;
+  width: auto;
+}
+
+.navbar {
+  grid-area: 2/1/auto/2;
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+.navbar li {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  padding-top: 7px;
+}
+
+.header {
+  padding-top: 0.6%;
+  padding-bottom: 2%;
+  grid-area: 1/1/span 1/span 3;
+  text-align: center;
+}
+.header .title {
+  font-family: "Roboto", sans-serif;
+  font-size: 44px;
+}
+
+article.project {
+  padding: 15px 0 10px 0;
+  border-bottom: 1px dashed black;
+}
+article.project p {
+  padding-top: 12px;
+}
+
+article.post p:first-of-type {
+  padding-top: 30px;
+}
+article.post p {
+  padding-top: 15px;
+}
+article.post blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+article.post blockquote p {
+  display: inline;
+}
+
+.footer {
+  grid-area: 3/1/span 1/span 3;
+  border-top: 1px solid black;
+  padding: 0.5%;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */
