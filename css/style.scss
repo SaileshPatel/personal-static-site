@@ -21,7 +21,7 @@ $size: 40px;
         margin: auto;
     }
 
-    #about {
+    div#about {
         text-align: center;
 
         * {
@@ -38,7 +38,7 @@ $size: 40px;
         grid-template-rows: auto 1fr auto;
     }
 
-    #about {
+    div#about {
         height: 100%;
         width: 100%;
         display: grid;
@@ -59,52 +59,6 @@ $size: 40px;
             max-width: 75%;
             height: auto;
             margin: auto;         
-        }
-    
-        #skills {
-            grid-area: 3 / 1 / span 1 / span 2;
-            display: grid;
-            grid-auto-rows: max-content;
-            grid-template-columns: 33% 33% 33%;
-
-            div:nth-child(odd) {
-                border-left: 1px solid black;
-                border-right: 1px solid black;
-
-            }
-
-            li {
-                text-align: center;
-                //list-style: disc;
-            }
-
-            h1 {
-                grid-area: 1 / 1 / span 1 / span 3;
-                padding-bottom: 1vh;
-                text-align: center;
-                border-bottom: 1px solid black;
-            }
-
-            #beginner {
-                grid-area: 2 / 3 / span 1 / span 1;
-                h2 {
-                    text-align: center;
-                }
-            }
-
-            #intermediate {
-                grid-area: 2 / 2 / span 1 / span 1;
-                h2 {
-                    text-align: center;
-                }
-            }
-
-            #expert {
-                grid-area: 2 / 1 / span 1 / span 1;
-                h2 {
-                    text-align: center;
-                }    
-            }
         }
     }
 }
@@ -177,38 +131,6 @@ main {
         font-family: $font-stack;
         font-size: $size * 1.1;
     }
-}
-
-article.project {
-    padding: 15px 0 10px 0;
-    border-bottom: 1px dashed rgb(0, 0, 0);
-
-    p {
-        padding-top: 12px;
-    }
-}
-
-article.post {
-    p:first-of-type {
-        padding-top: 30px;
-    }
-
-    p {
-        padding-top: 15px;
-    }
-
-    // blockquote style from Coyier (2013) - https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
-    blockquote {
-        background: #f9f9f9;
-        border-left: 10px solid #ccc;
-        margin: 1.5em 10px;
-        padding: 0.5em 10px;
-    
-        p {
-            display: inline;
-        }
-    }
-    // end of blockquote style
 }
 
 .footer {

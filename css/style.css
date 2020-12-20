@@ -16,10 +16,10 @@
     margin: auto;
   }
 
-  #about {
+  div#about {
     text-align: center;
   }
-  #about * {
+  div#about * {
     padding-bottom: 3px;
   }
 }
@@ -30,7 +30,7 @@
     grid-template-rows: auto 1fr auto;
   }
 
-  #about {
+  div#about {
     height: 100%;
     width: 100%;
     display: grid;
@@ -38,54 +38,17 @@
     grid-auto-rows: max-content;
     row-gap: 1%;
   }
-  #about #title {
+  div#about #title {
     grid-area: 1/1/span 1/span 2;
   }
-  #about #bio {
+  div#about #bio {
     grid-area: 2/1/span 1/span 1;
   }
-  #about #profile {
+  div#about #profile {
     grid-area: 2/2/span 1/span 1;
     max-width: 75%;
     height: auto;
     margin: auto;
-  }
-  #about #skills {
-    grid-area: 3/1/span 1/span 2;
-    display: grid;
-    grid-auto-rows: max-content;
-    grid-template-columns: 33% 33% 33%;
-  }
-  #about #skills div:nth-child(odd) {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-  }
-  #about #skills li {
-    text-align: center;
-  }
-  #about #skills h1 {
-    grid-area: 1/1/span 1/span 3;
-    padding-bottom: 1vh;
-    text-align: center;
-    border-bottom: 1px solid black;
-  }
-  #about #skills #beginner {
-    grid-area: 2/3/span 1/span 1;
-  }
-  #about #skills #beginner h2 {
-    text-align: center;
-  }
-  #about #skills #intermediate {
-    grid-area: 2/2/span 1/span 1;
-  }
-  #about #skills #intermediate h2 {
-    text-align: center;
-  }
-  #about #skills #expert {
-    grid-area: 2/1/span 1/span 1;
-  }
-  #about #skills #expert h2 {
-    text-align: center;
   }
 }
 p, li {
@@ -152,30 +115,6 @@ main {
 .header .title {
   font-family: "Roboto", sans-serif;
   font-size: 44px;
-}
-
-article.project {
-  padding: 15px 0 10px 0;
-  border-bottom: 1px dashed black;
-}
-article.project p {
-  padding-top: 12px;
-}
-
-article.post p:first-of-type {
-  padding-top: 30px;
-}
-article.post p {
-  padding-top: 15px;
-}
-article.post blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-}
-article.post blockquote p {
-  display: inline;
 }
 
 .footer {
