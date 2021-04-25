@@ -3,6 +3,21 @@
 $font-stack: 'Roboto', sans-serif;
 $size: 40px;
 
+@media (prefers-color-scheme: dark) {
+  .container {
+    color: rgb(255, 255, 255);
+    background: #525252;
+  }
+
+  a {
+      color: #9ED0E6;
+  }
+
+  a:visited {
+      color: #9f9ee6;
+  }
+}
+
 .container {
     display: flex;
     flex-direction: column;
