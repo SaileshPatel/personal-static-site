@@ -3,33 +3,20 @@
 $font-stack: 'Roboto', sans-serif;
 $size: 40px;
 
-@media (prefers-color-scheme: dark) {
-  .container {
-    color: rgb(255, 255, 255);
-    background: #525252;
-  }
-
-  a {
-      color: #9ED0E6;
-  }
-
-  a:visited {
-      color: #9f9ee6;
-  }
-}
+$mobile-size: 768px;
 
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #dadbdf;
 }
-  
+
 #profile {
     border-radius: 50%;
 }
 
-// mobile view
-@media (max-width: 768px){
+@media (max-width: $mobile-size) {
     #profile {
         max-width: 50%;
         height: auto;
@@ -45,8 +32,7 @@ $size: 40px;
     }
 }
 
-// desktop view
-@media (min-width: 768px) {
+@media (min-width: $mobile-size) {
     .container {
         display: grid;
         grid-template-columns: 200px 1fr 200px;
@@ -64,7 +50,7 @@ $size: 40px;
         #title {
             grid-area: 1 / 1 / span 1 / span 2;
         }
-    
+
         #bio {
             grid-area: 2 / 1 / span 1 / span 1;
         }
@@ -73,12 +59,13 @@ $size: 40px;
             grid-area: 2 / 2 / span 1 / span 1;
             max-width: 75%;
             height: auto;
-            margin: auto;         
+            margin: auto;
         }
     }
 }
 
-p, li {
+p,
+li {
     font-size: $size * 0.38;
     font-family: $font-stack;
     padding-top: 6px;
