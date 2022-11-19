@@ -8,6 +8,9 @@
 
 #profile {
   border-radius: 50%;
+  max-width: 75%;
+  height: auto;
+  margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -45,9 +48,6 @@
   }
   div#about #profile {
     grid-area: 2/2/span 1/span 1;
-    max-width: 75%;
-    height: auto;
-    margin: auto;
   }
 }
 p,
