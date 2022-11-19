@@ -20,6 +20,11 @@ $mobile-size: 768px;
     margin: auto;
 }
 
+#bio ul {
+    list-style: disc;
+    padding-left: 10px;
+}
+
 @media (max-width: $mobile-size) {
     #profile {
         max-width: 50%;
