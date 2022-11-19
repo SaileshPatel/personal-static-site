@@ -1,26 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
-@media (prefers-color-scheme: dark) {
-  .container {
-    color: white;
-    background: #525252;
-  }
-
-  a {
-    color: #9ED0E6;
-  }
-
-  a:visited {
-    color: #9f9ee6;
-  }
-}
 .container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #dadbdf;
 }
 
 #profile {
   border-radius: 50%;
+  max-width: 75%;
+  min-width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+#bio ul {
+  list-style: disc;
+  padding-left: 10px;
 }
 
 @media (max-width: 768px) {
@@ -29,12 +25,22 @@
     height: auto;
     margin: auto;
   }
-
   div#about {
     text-align: center;
   }
   div#about * {
     padding-bottom: 3px;
+  }
+  div#about #bio ul {
+    list-style: none;
+  }
+  #profile {
+    display: none;
+    visibility: hidden;
+  }
+  .social ul > li {
+    padding-left: 10px;
+    display: inline-block;
   }
 }
 @media (min-width: 768px) {
@@ -43,7 +49,6 @@
     grid-template-columns: 200px 1fr 200px;
     grid-template-rows: auto 1fr auto;
   }
-
   div#about {
     height: 100%;
     width: 100%;
@@ -60,12 +65,10 @@
   }
   div#about #profile {
     grid-area: 2/2/span 1/span 1;
-    max-width: 75%;
-    height: auto;
-    margin: auto;
   }
 }
-p, li {
+p,
+li {
   font-size: 15.2px;
   font-family: "Roboto", sans-serif;
   padding-top: 6px;
