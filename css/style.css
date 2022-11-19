@@ -31,6 +31,9 @@
   div#about * {
     padding-bottom: 3px;
   }
+  div#about #bio ul {
+    list-style: none;
+  }
   #profile {
     display: none;
     visibility: hidden;
