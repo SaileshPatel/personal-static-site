@@ -15,6 +15,7 @@ $mobile-size: 768px;
 #profile {
     border-radius: 50%;
     max-width: 75%;
+    min-width: 50%;
     height: auto;
     margin: auto;
 }
@@ -32,6 +33,11 @@ $mobile-size: 768px;
         * {
             padding-bottom: 3px;
         }
+    }
+
+    #profile {
+        display: none;
+        visibility: hidden;
     }
 }
 

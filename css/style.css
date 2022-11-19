@@ -9,6 +9,7 @@
 #profile {
   border-radius: 50%;
   max-width: 75%;
+  min-width: 50%;
   height: auto;
   margin: auto;
 }
@@ -24,6 +25,10 @@
   }
   div#about * {
     padding-bottom: 3px;
+  }
+  #profile {
+    display: none;
+    visibility: hidden;
   }
 }
 @media (min-width: 768px) {
