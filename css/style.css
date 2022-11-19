@@ -30,6 +30,9 @@
     display: none;
     visibility: hidden;
   }
+  .social ul > li {
+    display: inline-block;
+  }
 }
 @media (min-width: 768px) {
   .container {

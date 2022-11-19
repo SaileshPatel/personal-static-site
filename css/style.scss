@@ -39,6 +39,12 @@ $mobile-size: 768px;
         display: none;
         visibility: hidden;
     }
+
+    .social {
+        ul>li {
+            display: inline-block;
+        }
+    }
 }
 
 @media (min-width: $mobile-size) {
